@@ -14,7 +14,7 @@ function App() {
   const query = useQuery();
   const api = query.get("api");
   if (!api) return;
-  if (/https:\/\/.*.[json|y?ml]/.test(api)) {
+  if (/https:\/\/.*\.[json|y?ml]/.test(api)) {
     return <SwaggerUI url={api} />
   }
 }
