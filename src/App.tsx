@@ -10,10 +10,10 @@ const useQuery = () => {
 
 function App() {
   const query = useQuery();
-  const api = query.get('api');
-  if (!api) return;
-  if (/https:\/\/.*\.[json|y?ml]/.test(api)) {
-    return <SwaggerUI url={api} />;
+  const url = query.get('url');
+  if (!url) return;
+  if (/https:\/\/.*\.[json|y?ml]/.test(url)) {
+    return <SwaggerUI url={url} />;
   }
 }
 
