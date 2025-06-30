@@ -49,7 +49,10 @@ function App() {
   };
 
   if (url && /https:\/\/.*\.[json|y?ml]/.test(url)) {
-    return <SwaggerUI url={url} />;
+    return <SwaggerUI 
+        url={url}
+        plugins={[MermaidRenderPlugin]}
+      />;
   }
 
   return (
